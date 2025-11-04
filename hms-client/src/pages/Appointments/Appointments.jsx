@@ -27,6 +27,7 @@ const Appointments = () => {
     };
     loadAppointments();
   }, [fetchAppointments]);
+  console.log("Appointments:", appointments);
 
   // ✅ Update filtered list when appointments or filter changes
   useEffect(() => {
@@ -53,7 +54,7 @@ const Appointments = () => {
         return "bg-blue-100 text-blue-800 border-blue-200";
       case "completed":
         return "bg-green-100 text-green-800 border-green-200";
-      case "canceled":
+      case "cancelled":
         return "bg-red-100 text-red-800 border-red-200";
       default:
         return "bg-gray-100 text-gray-800 border-gray-200";
@@ -109,7 +110,7 @@ const Appointments = () => {
         {/* Filter Tabs */}
         <div className="max-w-7xl mx-auto mb-6">
           <div className="bg-white rounded-lg shadow-md p-2 flex gap-2 flex-wrap">
-            {["all", "scheduled", "completed", "canceled"].map((status) => (
+            {["all", "scheduled", "completed", "cancelled"].map((status) => (
               <button
                 key={status}
                 onClick={() => setFilter(status)}
@@ -185,13 +186,13 @@ const Appointments = () => {
                           <div className="flex items-center gap-2 text-gray-600">
                             <Calendar className="w-4 h-4 text-teal-600 flex-shrink-0" />
                             <span className="text-sm">
-                              {formatDate(appointment.appointmentDate)}
+                              {formatDate(appointment.date)}
                             </span>
                           </div>
                           <div className="flex items-center gap-2 text-gray-600">
                             <Clock className="w-4 h-4 text-teal-600 flex-shrink-0" />
                             <span className="text-sm">
-                              {appointment.appointmentTime}
+                              {appointment.timeSlot}
                             </span>
                           </div>
                           <div className="flex items-center gap-2 text-gray-600">

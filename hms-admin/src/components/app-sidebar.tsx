@@ -1,4 +1,4 @@
-import { Bed, Box, ClipboardList, Home } from "lucide-react";
+import { Bed, Box, ClipboardList, Home, PersonStanding } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -30,6 +30,11 @@ const items = [
     title: "OPD Queue",
     url: "/opd-queue",
     icon: ClipboardList,
+  },
+  {
+    title: "Appointments",
+    url: "/appointments",
+    icon: PersonStanding,
   },
 ];
 

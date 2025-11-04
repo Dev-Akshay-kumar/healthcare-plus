@@ -7,6 +7,7 @@ import App from "./App.tsx";
 import BedsPage from "./pages/BedsPage.tsx";
 import InventoryPage from "./pages/InventoryPage.tsx";
 import OpdQueuePage from "./pages/opd-queue.tsx";
+import Appointments from "./pages/Appointments.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
@@ -22,6 +23,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/beds" element={<BedsPage />} />
         <Route path="/inventory" element={<InventoryPage />} />
         <Route path="/opd-queue" element={<OpdQueuePage />} />
+        <Route path="/appointments" element={<Appointments />} />
       </Route>
     </Routes>
   </BrowserRouter>

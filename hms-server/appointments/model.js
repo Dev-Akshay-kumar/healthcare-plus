@@ -14,7 +14,7 @@ const appointmentSchema = new Schema({
     timeSlot: { type: String, required: true },              // ✅ Renamed
     status: {
         type: String,
-        enum: ["scheduled", "completed", "canceled"],
+        enum: ["scheduled", "completed", "cancelled"],
         default: "scheduled"
     },
 }, { timestamps: true });
